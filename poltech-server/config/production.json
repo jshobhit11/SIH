@@ -1,0 +1,12 @@
+{
+    "dbConfig":{
+        "dbName":"poltechdb",
+        "username":"admin",
+        "password":"admin123"
+    },
+    "jwt":{
+        "expiration":10000,
+        "secretKey":"sihhackathon"
+    },
+    "environment":"development"
+}

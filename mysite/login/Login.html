@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in and Sign up Form
+    </title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+            <form action="http://localhost:3000/api/users" method="post" class="sign-in-form">
+                <h2 class="title">Sign up</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="First Name" name="first" required />
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Last Name" name="last" required/>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Email" name="email" required/>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Phone" name="phone" />
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" name="password" required/>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Retype Password" name="retypedpassword" required />
+                </div>
+                <input type="submit"  value="Sign up" />
+                <p class="social-text">
+                    or sign in with social platforms
+
+                </p>
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                </div>
+            </form>
+            </div>
+            
+            <div class="signup-signup">
+                <form action="http://localhost:3000/api/users/login" method="post" class="sign-up-form">
+                    <h2 class="title">Log in</h2>
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="email" name="email" />
+                    </div>
+                    <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="password" name="password" />
+                </div>
+                <input type="submit" class="btn solid" value="Log in" />
+                <p class="social-text">
+                    or sign up with social platforms
+    
+                </p>
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                </div>
+                </form>
+                </div>
+        
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h1>New Here?</h1>
+                    <p>Log In First...</p>
+                    <button class="btn transparent" id="sign-up-button">sign up</button>
+              </div>
+              <img src="data:image/jpeg;base64,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" alt="" class="image" />
+            </div>
+            <!-- <div class="panel right-panel">
+                <div class="content">
+                    <h1>one of us</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi facilis odit laborum, nesciunt nam iusto rem saepe delectus nobis sequi! Earum nulla sunt amet eius cupiditate? Corporis eaque ipsa est.</p>
+                    <button class="btn transparent" id="sign-in-button">sign in</button>
+              </div>
+              <img src="https://image.shutterstock.com/image-vector/people-register-online-registration-sign-260nw-1824948608.jpg" alt="" class="image"/>
+            </div> -->
+        </div>
+    </div>
+
+
+    <script scr="login2.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+	"dbconfig": {
+		"url": "mongodb://localhost:27017/poltechdb"
+	},
+	"jwt": {
+		"expiration": 10000,
+		"secretKey": "sihhackathon"
+	},
+	"environment": "dev",
+	"serverDomain": "http://localhost:3000"
+}
